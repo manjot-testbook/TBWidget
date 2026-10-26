@@ -781,6 +781,36 @@ svg {
   height: 11px;
 }
 
+/* Legacy hero footer (reverted) */
+
+.tw-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.tw-bottom .tw-ai {
+  flex: 1;
+}
+
+.tw-bottom .tw-cta {
+  flex: 0 0 auto;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 8px;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.tw-bottom .tw-cta::after {
+  content: " →";
+}
+
 /* 2x2 */
 
 .size-2x2 .tw-eyebrow {
@@ -869,6 +899,43 @@ svg {
 
 .app-icon small {
   display: none;
+}
+
+/* Colored app grid, used only by the reverted hero mockup */
+
+.app-grid-color {
+  gap: 24px 9px;
+  margin-top: 26px;
+}
+
+.app-grid-color .app-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: -0.02em;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 5px 12px rgba(2, 6, 23, 0.22);
+}
+
+.app-grid-color .app-icon small {
+  display: block;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 6.5px;
+  font-weight: 500;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .home-search {
