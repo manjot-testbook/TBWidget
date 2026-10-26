@@ -1,12 +1,14 @@
 # Testbook Home Screen Widget — PRD
 
-**Status:** Draft for design review
-**Version:** 1.0
-**Date:** 26 October 2026
-**Owner:** Product — Manjot
-**App version:** 9.11.x
-**Platform:** Android (`minSdk 23`, `targetSdk 36`)
-**Surfaces:** Home screen widget, app shortcuts, Daily Brief notification, Android 16 Live Update
+| | |
+|---|---|
+| **Status** | Draft for design review |
+| **Version** | 1.0 |
+| **Date** | 26 October 2026 |
+| **Owner** | Product — Manjot |
+| **App version** | 9.11.x |
+| **Platform** | Android (`minSdk 23`, `targetSdk 36`) |
+| **Surfaces** | Home screen widget, app shortcuts, Daily Brief notification, Android 16 Live Update |
 
 ---
 
