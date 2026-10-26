@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testbook Widget — PRD & Design</title>
+  <meta name="description" content="Testbook home screen widget: weekly streak hero, daily subline, AI micro-coach, install flow, and measurement plan." />
+  <meta name="theme-color" content="#F6F7FB" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-flame" viewBox="0 0 24 24">
+      <path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24">
+      <path d="m12 2 1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9L12 2z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24">
+      <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24">
+      <rect x="4" y="10" width="16" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24">
+      <path d="m3 17 6-6 4 4 8-8M15 7h6v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-target" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Testbook Widget home">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">Testbook <span>Widget</span></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#problem">Problem</a>
+      <a href="#widget">Widget</a>
+      <a href="#states">States</a>
+      <a href="#install">Install</a>
+      <a href="#brief">Daily Brief</a>
+      <a href="#system">System</a>
+      <a href="#roadmap">Roadmap</a>
+    </nav>
+    <a class="btn btn-small btn-dark" href="https://github.com/manjot-testbook/TBWidget/blob/main/PRD.md" target="_blank" rel="noopener">PRD <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> Product requirements + design spec · Oct 2026</div>
+        <h1>The home screen is the new <em>retention surface.</em></h1>
+        <p class="lede">A weekly streak widget that turns Testbook from an app you open into a habit you keep.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#widget">Explore the widget <svg class="ic"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="https://github.com/manjot-testbook/TBWidget/blob/main/PRD.md" target="_blank" rel="noopener">Read the PRD</a>
+        </div>
+        <div class="hero-meta">
+          <span>Android 8+</span>
+          <span>targetSdk 36</span>
+          <span>2×2 / 4×2</span>
+          <span>Glance</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="halo"></div>
+        <div class="phone phone-hero">
+          <div class="phone-screen home-screen">
+            <div class="status-bar">
+              <span>9:41</span>
+              <span class="status-icons"><i></i><i></i><i></i><span class="battery"></span></span>
+            </div>
+
+            <div class="tb-widget size-4x2 state-active" data-widget>
+              <div class="tw-top">
+                <span class="tw-eyebrow" data-w-eyebrow>THIS WEEK</span>
+                <span class="tw-streak"><svg class="ic tw-flame"><use href="#i-flame"/></svg><span data-w-streak>Day 6</span></span>
+              </div>
+              <div class="tw-hero">
+                <div class="tw-number"><span data-w-number>3</span><span class="tw-slash">/</span><span class="tw-total" data-w-total>5</span></div>
+                <div class="tw-label" data-w-label>tests this week</div>
+              </div>
+              <div class="tw-days" data-w-days></div>
+              <div class="tw-bottom">
+                <span class="tw-ai" data-w-ai>“Algebra 42% — 10 Qs”</span>
+                <span class="tw-cta" data-w-cta>Start →</span>
+              </div>
+            </div>
+
+            <div class="app-grid">
+              <div class="app-icon app-blue"><span>TB</span><small>Testbook</small></div>
+              <div class="app-icon app-pink"><span>Pass</span><small>Pass</small></div>
+              <div class="app-icon app-gold"><span>PYQ</span><small>Papers</small></div>
+              <div class="app-icon app-green"><span>CA</span><small>Current</small></div>
+              <div class="app-icon app-violet"><span>AI</span><small>Samadhan</small></div>
+              <div class="app-icon app-slate"><span>PDF</span><small>Notes</small></div>
+              <div class="app-icon app-teal"><span>Quiz</span><small>Quiz</small></div>
+              <div class="app-icon app-rose"><span>Mock</span><small>Mock</small></div>
+            </div>
+
+            <div class="dock">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="phone phone-mini">
+          <div class="phone-screen home-screen mini">
+            <div class="status-bar"><span>9:41</span><span class="status-icons"><i></i><span class="battery"></span></span></div>
+            <div class="tb-widget size-2x2 state-active" data-widget>
+              <div class="tw-top">
+                <span class="tw-eyebrow" data-w-eyebrow>THIS WEEK</span>
+                <svg class="ic tw-flame"><use href="#i-flame"/></svg>
+              </div>
+              <div class="tw-number"><span data-w-number>3</span><span class="tw-slash">/</span><span class="tw-total" data-w-total>5</span></div>
+              <div class="tw-label" data-w-label>tests</div>
+              <div class="tw-streak-line"><svg class="ic"><use href="#i-flame"/></svg><span data-w-streak>Day 6</span></div>
+              <div class="tw-dots" data-w-days></div>
+            </div>
+            <div class="mini-grid"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- THESIS -->
+    <section class="thesis" aria-label="Product thesis">
+      <div class="thesis-card">
+        <span class="thesis-kicker">Contract</span>
+        <h3>Make the streak visible enough that breaking it feels real.</h3>
+      </div>
+      <div class="thesis-card">
+        <span class="thesis-kicker">Proof</span>
+        <h3>Show that the last mock moved the needle.</h3>
+      </div>
+      <div class="thesis-card">
+        <span class="thesis-kicker">Next step</span>
+        <h3>Remove the “what should I do now?” decision.</h3>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="section" id="problem">
+      <div class="section-head reveal">
+        <div class="kicker">01 · The problem</div>
+        <h2>The app is opened with intent. Not with habit.</h2>
+        <p>Users know Testbook is where the mocks are. They don’t know what the smallest useful action is today — and their progress is buried three taps deep.</p>
+      </div>
+
+      <div class="flow-compare reveal">
+        <div class="flow-card flow-today">
+          <div class="flow-label">Today</div>
+          <div class="flow-steps">
+            <span>Home</span><i>→</i><span>Tests</span><i>→</i><span>Test series</span><i>→</i><span>Exam modal</span><i>→</i><span>Section list</span><i>→</i><span>Pre-instructions</span><i>→</i><span class="flow-start">Start</span>
+          </div>
+          <div class="flow-foot">6 transitions before the first question</div>
+        </div>
+        <div class="flow-card flow-widget">
+          <div class="flow-label">With the widget</div>
+          <div class="flow-steps">
+            <span>Home screen</span><i>→</i><span class="flow-start">Tap widget</span><i>→</i><span>Pre-instructions</span><i>→</i><span>Start</span>
+          </div>
+          <div class="flow-foot">2 transitions to the first question</div>
+        </div>
+      </div>
+
+      <div class="evidence-grid reveal">
+        <article class="evidence-card">
+          <span class="evidence-number">94</span>
+          <h3>screens, zero OS surfaces</h3>
+          <p>Twelve product lanes, a complete event catalogue — and no widget, shortcut, or launcher presence in the spec.</p>
+        </article>
+        <article class="evidence-card">
+          <span class="evidence-number">80%</span>
+          <h3>of the data already exists</h3>
+          <p><code>getTestSubmissionsStreak()</code> already returns the weekly timeline, badges, and the next test. The daily streak is the missing piece.</p>
+        </article>
+        <article class="evidence-card">
+          <span class="evidence-number">0</span>
+          <h3>daily streak for all users</h3>
+          <p>The only live daily streak is Super-only. The old <code>StudentStreaks</code> model is unused. We build a real one — or we don’t show “Day 6”.</p>
+        </article>
+      </div>
+
+      <blockquote class="pullquote reveal">
+        “A widget is not another dashboard. It is a daily commitment contract.”
+      </blockquote>
+    </section>
+
+    <!-- WIDGET -->
+    <section class="section section-tint" id="widget">
+      <div class="section-head reveal">
+        <div class="kicker">02 · The widget</div>
+        <h2>One hero. One subline. One action.</h2>
+        <p>Weekly tests are the exam-specific goal. The daily streak is the habit. The AI line is the reason to tap <em>today</em>.</p>
+      </div>
+
+      <div class="widget-lab reveal">
+        <div class="lab-stage">
+          <div class="lab-phone-wrap">
+            <span class="lab-badge">4×2 · Default</span>
+            <div class="phone lab-phone">
+              <div class="phone-screen home-screen">
+                <div class="status-bar"><span>9:41</span><span class="status-icons"><i></i><i></i><i></i><span class="battery"></span></span></div>
+                <div class="tb-widget size-4x2 state-active" data-widget>
+                  <div class="tw-top">
+                    <span class="tw-eyebrow" data-w-eyebrow>THIS WEEK</span>
+                    <span class="tw-streak"><svg class="ic tw-flame"><use href="#i-flame"/></svg><span data-w-streak>Day 6</span></span>
+                  </div>
+                  <div class="tw-hero">
+                    <div class="tw-number"><span data-w-number>3</span><span class="tw-slash">/</span><span class="tw-total" data-w-total>5</span></div>
+                    <div class="tw-label" data-w-label>tests this week</div>
+                  </div>
+                  <div class="tw-days" data-w-days></div>
+                  <div class="tw-bottom">
+                    <span class="tw-ai" data-w-ai>“Algebra 42% — 10 Qs”</span>
+                    <span class="tw-cta" data-w-cta>Start →</span>
+                  </div>
+                </div>
+                <div class="app-grid">
+                  <div class="app-icon app-blue"><span>TB</span></div>
+                  <div class="app-icon app-pink"><span>Pass</span></div>
+                  <div class="app-icon app-gold"><span>PYQ</span></div>
+                  <div class="app-icon app-green"><span>CA</span></div>
+                  <div class="app-icon app-violet"><span>AI</span></div>
+                  <div class="app-icon app-slate"><span>PDF</span></div>
+                  <div class="app-icon app-teal"><span>Quiz</span></div>
+                  <div class="app-icon app-rose"><span>Mock</span></div>
+                </div>
+                <div class="dock"><span></span><span></span><span></span><span></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lab-phone-wrap lab-phone-small">
+            <span class="lab-badge">2×2 · Glance</span>
+            <div class="phone phone-mini">
+              <div class="phone-screen home-screen mini">
+                <div class="status-bar"><span>9:41</span><span class="status-icons"><i></i><span class="battery"></span></span></div>
+                <div class="tb-widget size-2x2 state-active" data-widget>
+                  <div class="tw-top">
+                    <span class="tw-eyebrow" data-w-eyebrow>THIS WEEK</span>
+                    <svg class="ic tw-flame"><use href="#i-flame"/></svg>
+                  </div>
+                  <div class="tw-number"><span data-w-number>3</span><span class="tw-slash">/</span><span class="tw-total" data-w-total>5</span></div>
+                  <div class="tw-label" data-w-label>tests</div>
+                  <div class="tw-streak-line"><svg class="ic"><use href="#i-flame"/></svg><span data-w-streak>Day 6</span></div>
+                  <div class="tw-dots" data-w-days></div>
+                </div>
+                <div class="mini-grid"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="anatomy">
+          <div class="anatomy-head">
+            <span class="kicker">Anatomy</span>
+            <h3>Five decisions, in order of importance.</h3>
+          </div>
+          <ol class="anatomy-list">
+            <li>
+              <span class="anatomy-index">01</span>
+              <div><strong>Weekly hero</strong><p><code>3/5 tests this week</code> — the exam-specific goal. Same number as the Tests tab, so the widget never contradicts the app.</p></div>
+            </li>
+            <li>
+              <span class="anatomy-index">02</span>
+              <div><strong>Daily subline</strong><p><code>🔥 Day 6</code> — the habit loop. Server-driven; hides gracefully if the daily-streak service is unavailable.</p></div>
+            </li>
+            <li>
+              <span class="anatomy-index">03</span>
+              <div><strong>Day pills</strong><p>Seven study-day states: done, today, upcoming, missed. Momentum without a chart.</p></div>
+            </li>
+            <li>
+              <span class="anatomy-index">04</span>
+              <div><strong>AI micro-coach</strong><p>One diagnostic line, max 64 characters. Specific beats cheerful: “Algebra 42% — 10 Qs.”</p></div>
+            </li>
+            <li>
+              <span class="anatomy-index">05</span>
+              <div><strong>One CTA</strong><p>Start, resume, save, share. Never two competing buttons. The whole card also taps through.</p></div>
+            </li>
+          </ol>
+
+          <div class="left-out">
+            <span class="kicker">Deliberately left out</span>
+            <div class="chips">
+              <span>Leaderboard</span><span>Multiple CTAs</span><span>Ads</span><span>Fake countdown</span><span>4×4 stats grid</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATES -->
+    <section class="section" id="states">
+      <div class="section-head reveal">
+        <div class="kicker">03 · States</div>
+        <h2>The widget changes with the user, not the calendar.</h2>
+        <p>Eleven states, each with its own copy and action. The state is derived at render time, so midnight rollover works even if WorkManager is delayed.</p>
+      </div>
+
+      <div class="state-tabs reveal" role="group" aria-label="Widget state">
+        <button class="state-tab" data-state="never" aria-pressed="false"><span class="swatch s-blue"></span>Never started</button>
+        <button class="state-tab" data-state="active" aria-pressed="true"><span class="swatch s-blue"></span>Active</button>
+        <button class="state-tab" data-state="atRisk" aria-pressed="false"><span class="swatch s-red"></span>At risk</button>
+        <button class="state-tab" data-state="badge" aria-pressed="false"><span class="swatch s-gold"></span>Badge</button>
+        <button class="state-tab" data-state="missed" aria-pressed="false"><span class="swatch s-slate"></span>Missed</button>
+        <button class="state-tab" data-state="lapsed" aria-pressed="false"><span class="swatch s-slate"></span>Lapsed</button>
+        <button class="state-tab" data-state="exam" aria-pressed="false"><span class="swatch s-indigo"></span>Exam week</button>
+        <button class="state-tab" data-state="resume" aria-pressed="false"><span class="swatch s-teal"></span>Resume</button>
+        <button class="state-tab" data-state="stale" aria-pressed="false"><span class="swatch s-dark"></span>Stale</button>
+        <button class="state-tab" data-state="pass" aria-pressed="false"><span class="swatch s-pink"></span>Pass expired</button>
+        <button class="state-tab" data-state="loggedOut" aria-pressed="false"><span class="swatch s-slate"></span>Logged out</button>
+      </div>
+
+      <div class="state-stage reveal">
+        <div class="state-phone-wrap">
+          <div class="phone state-phone">
+            <div class="phone-screen home-screen">
+              <div class="status-bar"><span>9:41</span><span class="status-icons"><i></i><i></i><i></i><span class="battery"></span></span></div>
+              <div class="tb-widget size-4x2 state-active" data-widget data-state-widget>
+                <div class="tw-top">
+                  <span class="tw-eyebrow" data-w-eyebrow>THIS WEEK</span>
+                  <span class="tw-streak"><svg class="ic tw-flame"><use href="#i-flame"/></svg><span data-w-streak>Day 6</span></span>
+                </div>
+                <div class="tw-hero">
+                  <div class="tw-number"><span data-w-number>3</span><span class="tw-slash">/</span><span class="tw-total" data-w-total>5</span></div>
+                  <div class="tw-label" data-w-label>tests this week</div>
+                </div>
+                <div class="tw-days" data-w-days></div>
+                <div class="tw-bottom">
+                  <span class="tw-ai" data-w-ai>“Algebra 42% — 10 Qs”</span>
+                  <span class="tw-cta" data-w-cta>Start →</span>
+                </div>
+              </div>
+              <div class="app-grid">
+                <div class="app-icon app-blue"><span>TB</span></div>
+                <div class="app-icon app-pink"><span>Pass</span></div>
+                <div class="app-icon app-gold"><span>PYQ</span></div>
+                <div class="app-icon app-green"><span>CA</span></div>
+                <div class="app-icon app-violet"><span>AI</span></div>
+                <div class="app-icon app-slate"><span>PDF</span></div>
+                <div class="app-icon app-teal"><span>Quiz</span></div>
+                <div class="app-icon app-rose"><span>Mock</span></div>
+              </div>
+              <div class="dock"><span></span><span></span><span></span><span></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="state-detail">
+          <div class="state-detail-top">
+            <span class="state-code" data-state-code>ACTIVE_TODAY</span>
+            <span class="state-live"><i></i> Live state</span>
+          </div>
+          <h3 data-state-title>Active, studied today</h3>
+          <p class="state-trigger" data-state-trigger>A qualifying study action happened today.</p>
+          <div class="state-quote" data-state-copy>“Day 6. Streak secured.”</div>
+          <div class="state-why">
+            <span class="kicker">Why this works</span>
+            <p data-state-why>Confirmation, not another ask. The CTA moves to practice so the widget never nags after the goal is met.</p>
+          </div>
+          <div class="state-meta">
+            <div><span>CTA</span><strong data-state-cta>Practice 10 Qs →</strong></div>
+            <div><span>Deep link</span><strong data-state-link>testbook://tbapp/practice</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="state-grid reveal">
+        <div class="state-mini"><span class="mini-chip s-blue"></span><strong>Never started</strong><small>No test yet</small></div>
+        <div class="state-mini"><span class="mini-chip s-blue"></span><strong>Active</strong><small>Studied today</small></div>
+        <div class="state-mini"><span class="mini-chip s-red"></span><strong>At risk</strong><small>No study after 6 PM</small></div>
+        <div class="state-mini"><span class="mini-chip s-gold"></span><strong>Badge</strong><small>Milestone earned</small></div>
+        <div class="state-mini"><span class="mini-chip s-slate"></span><strong>Missed</strong><small>Streak reset</small></div>
+        <div class="state-mini"><span class="mini-chip s-slate"></span><strong>Lapsed</strong><small>7+ days inactive</small></div>
+        <div class="state-mini"><span class="mini-chip s-indigo"></span><strong>Exam week</strong><small>≤ 7 days left</small></div>
+        <div class="state-mini"><span class="mini-chip s-teal"></span><strong>Resume</strong><small>Attempt in progress</small></div>
+        <div class="state-mini"><span class="mini-chip s-dark"></span><strong>Stale</strong><small>Data older than 6h</small></div>
+        <div class="state-mini"><span class="mini-chip s-pink"></span><strong>Pass</strong><small>Expired, eligible</small></div>
+        <div class="state-mini"><span class="mini-chip s-slate"></span><strong>Logged out</strong><small>No session</small></div>
+      </div>
+    </section>
+
+    <!-- INSTALL -->
+    <section class="section section-tint" id="install">
+      <div class="section-head reveal">
+        <div class="kicker">04 · Install</div>
+        <h2>The install moment is the product.</h2>
+        <p>Most users never add a widget. We show the prompt at a moment of pride, with a live preview — never on cold launch.</p>
+      </div>
+
+      <div class="mockup-grid reveal">
+        <div class="mockup">
+          <div class="mockup-label"><span>Trigger 01</span> After first test submission</div>
+          <div class="phone sheet-phone">
+            <div class="phone-screen analysis-screen">
+              <div class="status-bar dark-status"><span>9:41</span><span class="status-icons"><i></i><i></i><span class="battery"></span></span></div>
+              <div class="analysis-head">
+                <span class="back-pill">←</span>
+                <span class="analysis-title">Test analysis</span>
+              </div>
+              <div class="analysis-score">
+                <span class="score-big">142<span>/200</span></span>
+                <span class="score-delta">+12 vs last</span>
+              </div>
+              <div class="analysis-bars">
+                <span style="--w:71%"></span><span style="--w:54%"></span><span style="--w:38%"></span>
+              </div>
+              <div class="analysis-cards"><span></span><span></span></div>
+              <div class="sheet-scrim"></div>
+              <div class="bottom-sheet">
+                <div class="sheet-handle"></div>
+                <div class="sheet-copy">
+                  <span class="sheet-kicker">Keep the momentum</span>
+                  <h3>Keep this streak on your home screen.</h3>
+                  <p>See your weekly goal and today’s next step without opening the app.</p>
+                </div>
+                <div class="sheet-preview">
+                  <div class="tb-widget size-4x2 state-active mini-widget" data-widget>
+                    <div class="tw-top">
+                      <span class="tw-eyebrow" data-w-eyebrow>THIS WEEK</span>
+                      <span class="tw-streak"><svg class="ic tw-flame"><use href="#i-flame"/></svg><span data-w-streak>Day 1</span></span>
+                    </div>
+                    <div class="tw-hero">
+                      <div class="tw-number"><span data-w-number>1</span><span class="tw-slash">/</span><span class="tw-total" data-w-total>5</span></div>
+                      <div class="tw-label" data-w-label>tests this week</div>
+                    </div>
+                    <div class="tw-days" data-w-days></div>
+                    <div class="tw-bottom">
+                      <span class="tw-ai" data-w-ai>“First data point. Keep going.”</span>
+                      <span class="tw-cta" data-w-cta>Start →</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="sheet-add">Add widget</button>
+                <button class="sheet-later">Not now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mockup">
+          <div class="mockup-label"><span>Week 1</span> App shortcuts, zero install</div>
+          <div class="phone shortcut-phone">
+            <div class="phone-screen home-screen">
+              <div class="status-bar"><span>9:41</span><span class="status-icons"><i></i><i></i><i></i><span class="battery"></span></span></div>
+              <div class="app-grid shortcut-grid">
+                <div class="app-icon app-blue"><span>TB</span><small>Testbook</small></div>
+                <div class="app-icon app-pink"><span>Pass</span><small>Pass</small></div>
+                <div class="app-icon app-gold"><span>PYQ</span><small>Papers</small></div>
+                <div class="app-icon app-green"><span>CA</span><small>Current</small></div>
+              </div>
+              <div class="shortcut-menu">
+                <div class="shortcut-title">Testbook</div>
+                <div class="shortcut-item"><svg class="ic"><use href="#i-target"/></svg><span>Attempt today’s test</span></div>
+                <div class="shortcut-item"><svg class="ic"><use href="#i-trend"/></svg><span>Weak areas</span></div>
+                <div class="shortcut-item"><svg class="ic"><use href="#i-spark"/></svg><span>Resume · Q34/100</span></div>
+                <div class="shortcut-item"><svg class="ic"><use href="#i-lock"/></svg><span>Testbook Pass</span></div>
+              </div>
+              <div class="dock"><span></span><span></span><span></span><span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="install-rules reveal">
+        <div class="rule-card">
+          <span class="kicker">Placement ladder</span>
+          <ol class="rule-list">
+            <li><span>01</span><div><strong>Test analysis</strong><small>First test submitted — peak pride</small></div></li>
+            <li><span>02</span><div><strong>Badge unlock</strong><small>Toppers Streak milestone</small></div></li>
+            <li><span>03</span><div><strong>Tests dashboard</strong><small>Overflow on the streak card</small></div></li>
+            <li><span>04</span><div><strong>Settings</strong><small>“Home screen widget” row</small></div></li>
+            <li><span>05</span><div><strong>Pass page</strong><small>Expired users only</small></div></li>
+          </ol>
+        </div>
+        <div class="rule-card rule-card-dark">
+          <span class="kicker">Prompt rules</span>
+          <ul class="rule-bullets">
+            <li>Live preview, not a static illustration.</li>
+            <li>Two actions only: <strong>Add widget</strong> / <strong>Not now</strong>.</li>
+            <li>“Not now” suppresses for 14 days, max 3 lifetime.</li>
+            <li><code>requestPinAppWidget()</code> on Android 8+; illustrated fallback when unsupported.</li>
+            <li>Never on cold launch. Never twice in one session.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- DAILY BRIEF -->
+    <section class="section" id="brief">
+      <div class="section-head reveal">
+        <div class="kicker">05 · Sound + haptics</div>
+        <h2>The widget is silent. The Brief is the tap on the shoulder.</h2>
+        <p>Android widgets cannot play audio or vibrate on update. We put sound and haptics where they belong: an opt-in notification, plus an Android 16 Live Update for the evening window.</p>
+      </div>
+
+      <div class="brief-grid reveal">
+        <div class="phone lockscreen-phone">
+          <div class="phone-screen lockscreen">
+            <div class="status-bar"><span>9:41</span><span class="status-icons"><i></i><i></i><i></i><span class="battery"></span></span></div>
+            <div class="lock-date"><span>MONDAY, 26 OCTOBER</span><strong>9:41</strong></div>
+            <div class="live-pill">
+              <svg class="ic"><use href="#i-flame"/></svg>
+              <div class="live-copy"><strong>Streak at risk</strong><span>4h 19m left</span></div>
+              <div class="live-progress"><span></span></div>
+            </div>
+            <div class="notification">
+              <div class="notification-top"><span class="notif-app"><span class="notif-mark">T</span> TESTBOOK · now</span><span class="notif-bell"><svg class="ic"><use href="#i-bell"/></svg></span></div>
+              <h4>🔥 Day 6 is on the line.</h4>
+              <p>5 min enough? One quick quiz keeps the streak alive.</p>
+              <div class="notif-actions"><span class="notif-primary">Save streak</span><span class="notif-secondary">Later</span></div>
+            </div>
+            <div class="lock-hint">Tap to open</div>
+          </div>
+        </div>
+
+        <div class="brief-copy">
+          <div class="brief-card">
+            <span class="kicker">Daily Brief</span>
+            <ul class="rule-bullets">
+              <li><strong>Default 7:30 PM</strong> local; user can change it.</li>
+              <li>Only if <strong>no study action today</strong> and streak &gt; 0.</li>
+              <li><strong>1/day, 5/week.</strong> No 10 PM–7 AM.</li>
+              <li>Pass line <strong>max 1/week</strong>, expired users only, live price only.</li>
+              <li>Sound and haptic are opt-in, and respect silent mode.</li>
+            </ul>
+          </div>
+          <div class="brief-card brief-card-gold">
+            <span class="kicker">Android 16 Live Update</span>
+            <p>9 PM–midnight, a promoted ongoing notification with progress to midnight. Tap → save streak. This is the lock-screen-adjacent surface — and the only place a haptic belongs.</p>
+            <code>Notification.ProgressStyle</code>
+          </div>
+          <div class="brief-card brief-card-dark">
+            <span class="kicker">What we won’t do</span>
+            <ul class="rule-bullets">
+              <li>No audio from the widget.</li>
+              <li>No vibration on widget data updates.</li>
+              <li>No custom sound that ignores silent mode.</li>
+              <li>No Pass audio on every notification.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SYSTEM -->
+    <section class="section section-tint" id="system">
+      <div class="section-head reveal">
+        <div class="kicker">06 · System</div>
+        <h2>One snapshot. Four refresh paths. No blank states.</h2>
+        <p>The widget reads from a cache, never from four APIs. FCM handles events, WorkManager handles the day, and the app handles the moment of open.</p>
+      </div>
+
+      <div class="pipeline reveal">
+        <div class="pipe-step"><span class="pipe-icon"><svg class="ic"><use href="#i-bell"/></svg></span><strong>FCM</strong><small>Test submitted, pass purchased</small></div>
+        <span class="pipe-arrow">→</span>
+        <div class="pipe-step"><span class="pipe-icon"><svg class="ic"><use href="#i-calendar"/></svg></span><strong>WorkManager</strong><small>4 scheduled refreshes / day</small></div>
+        <span class="pipe-arrow">→</span>
+        <div class="pipe-step"><span class="pipe-icon"><svg class="ic"><use href="#i-lock"/></svg></span><strong>Snapshot cache</strong><small>5-min TTL, per-locale</small></div>
+        <span class="pipe-arrow">→</span>
+        <div class="pipe-step"><span class="pipe-icon"><svg class="ic"><use href="#i-spark"/></svg></span><strong>Glance</strong><small>Render in &lt;100 ms</small></div>
+      </div>
+
+      <div class="system-grid reveal">
+        <div class="code-card">
+          <div class="code-head"><span>widget/snapshot.json</span><span class="code-dot"></span><span class="code-dot"></span><span class="code-dot"></span></div>
+          <pre><code>{
+  "streak": {
+    "days": 6,
+    "state": "AT_RISK",
+    "week": ["done","done","done","today","upcoming","upcoming","upcoming"],
+    "badge": { "name": "Top 100", "threshold": 5 }
+  },
+  "stats": {
+    "tests_attempted": 42,
+    "accuracy": 71,
+    "last_score": 142,
+    "delta": 12,
+    "percentile": 88.4
+  },
+  "next_action": {
+    "type": "test",
+    "id": "ssc-cgl-mock-12",
+    "duration_min": 10
+  },
+  "in_progress": null,
+  "exam": { "name": "SSC CGL", "days_left": 38 },
+  "ai_message": {
+    "id": "m_123",
+    "text": "Algebra 42%. 10 questions, 4 minutes.",
+    "locale": "en"
+  },
+  "pass": { "status": "EXPIRED", "price": 499, "strike": 949 },
+  "updated_at": "2026-10-26T19:00:00+05:30"
+}</code></pre>
+        </div>
+
+        <div class="system-notes">
+          <div class="note-block">
+            <span class="kicker">Refresh rules</span>
+            <ul class="rule-bullets">
+              <li><code>updatePeriodMillis = 0</code>; do not rely on the 30-minute system minimum.</li>
+              <li>Refresh on app open if data is &gt; 15 min stale.</li>
+              <li>Show “Updated 3h ago” after 6 hours; never a blank widget.</li>
+              <li>Per-block fallbacks: one API failure must not blank the card.</li>
+              <li>Refresh on timezone, locale, exam-date, and pass changes.</li>
+            </ul>
+          </div>
+          <div class="note-block">
+            <span class="kicker">Deep links</span>
+            <div class="link-list">
+              <div><code>testbook://tbapp/test/{id}</code><span>Test</span></div>
+              <div><code>testbook://tbapp/analysis/{id}</code><span>Analysis</span></div>
+              <div><code>testbook://tbapp/practice</code><span>Practice</span></div>
+              <div><code>testbook://tbapp/daily_quiz</code><span>Daily quiz</span></div>
+              <div><code>testbook://tbapp/pass</code><span>Pass</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEASUREMENT -->
+    <section class="section" id="measurement">
+      <div class="section-head reveal">
+        <div class="kicker">07 · Measurement</div>
+        <h2>Measure installs and taps. Never claim impressions.</h2>
+        <p>The launcher does not report when a widget is visible. “Active” is a proxy: last successful update or tap. “Incrementality” requires a randomised prompt holdout.</p>
+      </div>
+
+      <div class="measure-grid reveal">
+        <div class="funnel-card">
+          <span class="kicker">Install funnel</span>
+          <div class="funnel">
+            <div class="funnel-row"><span>Eligible</span><div class="funnel-bar" style="--w:100%"></div><strong>100%</strong></div>
+            <div class="funnel-row"><span>Prompt shown</span><div class="funnel-bar" style="--w:82%"></div><strong>82%</strong></div>
+            <div class="funnel-row"><span>Pin requested</span><div class="funnel-bar" style="--w:24%"></div><strong>24%</strong></div>
+            <div class="funnel-row"><span>Pin success</span><div class="funnel-bar" style="--w:14%"></div><strong>14%</strong></div>
+            <div class="funnel-row"><span>Weekly active</span><div class="funnel-bar" style="--w:9%"></div><strong>9%</strong></div>
+            <div class="funnel-row"><span>Test start</span><div class="funnel-bar" style="--w:4%"></div><strong>4%</strong></div>
+          </div>
+          <p class="funnel-note">Illustrative targets, not actuals. Calibrate after the 5% experiment.</p>
+        </div>
+
+        <div class="metrics-card">
+          <span class="kicker">Targets to calibrate</span>
+          <div class="metric"><span>Prompt → pin</span><strong>10–15%</strong></div>
+          <div class="metric"><span>D7 widget retention</span><strong>≥ 70%</strong></div>
+          <div class="metric"><span>Weekly active among pinned</span><strong>≥ 40%</strong></div>
+          <div class="metric"><span>Tap → test start</span><strong>≥ 15%</strong></div>
+          <div class="metric"><span>D7 retention lift</span><strong>+1.5–2.5 pp</strong></div>
+          <div class="metric"><span>Notification opt-out</span><strong>≤ 2%</strong></div>
+        </div>
+      </div>
+
+      <div class="callout-row reveal">
+        <div class="callout"><strong>What is measurable</strong><p>Installs via <code>onEnabled</code>/<code>onDeleted</code>, active via heartbeat, data freshness via <code>data_age_sec</code>, taps via deep-link UTM.</p></div>
+        <div class="callout"><strong>What is not</strong><p>Widget impressions. The launcher never tells you when the card is on screen. Do not put “views” in the dashboard.</p></div>
+        <div class="callout"><strong>The bias trap</strong><p>Widget installers are already engaged. Randomise the <em>prompt</em>, not the widget, or retention lift is fiction.</p></div>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section class="section section-tint" id="roadmap">
+      <div class="section-head reveal">
+        <div class="kicker">08 · Roadmap</div>
+        <h2>Eight weeks to a habit surface.</h2>
+        <p>Shortcuts first, widget second, intelligence third, scale last. If the daily-streak service slips, ship the weekly hero and enable the subline server-side later.</p>
+      </div>
+
+      <div class="timeline reveal">
+        <article class="phase phase-0">
+          <span class="phase-week">Week 1</span>
+          <h3>Spike</h3>
+          <ul><li>Glance + pin API</li><li>FCM refresh</li><li>OEM matrix</li><li>Snapshot contract</li></ul>
+        </article>
+        <article class="phase phase-1">
+          <span class="phase-week">Weeks 2–3</span>
+          <h3>Foundations</h3>
+          <ul><li>App shortcuts</li><li>4×2 + 2×2 streak</li><li>Install sheet</li><li>Analytics</li></ul>
+        </article>
+        <article class="phase phase-2">
+          <span class="phase-week">Weeks 4–5</span>
+          <h3>Intelligence</h3>
+          <ul><li>Daily streak</li><li>AI line</li><li>Report widget</li><li>Daily Brief</li></ul>
+        </article>
+        <article class="phase phase-3">
+          <span class="phase-week">Weeks 6–8</span>
+          <h3>Scale</h3>
+          <ul><li>5% → 25%</li><li>OEM hardening</li><li>50% → 100%</li><li>Live Update</li></ul>
+        </article>
+      </div>
+
+      <div class="team-row reveal">
+        <span class="team-label">Team</span>
+        <span class="team-chip">1 Android</span>
+        <span class="team-chip">1 Backend</span>
+        <span class="team-chip">1 Designer</span>
+        <span class="team-chip">1 PM</span>
+        <span class="team-chip">QA</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <span class="brand-mark">T</span>
+      <div><strong>Testbook Widget</strong><span>PRD v1.0 · October 2026</span></div>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/manjot-testbook/TBWidget/blob/main/PRD.md" target="_blank" rel="noopener">PRD.md</a>
+      <a href="https://github.com/manjot-testbook/TBWidget" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://manjot-testbook.github.io/TBAppScreens/" target="_blank" rel="noopener">TBAppScreens</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+    <p class="footer-note">Design references via Mobbin. Built for the Testbook Android app.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
