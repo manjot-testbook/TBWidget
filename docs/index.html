@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -45,6 +45,10 @@
       <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
       <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
       <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="m20 20-3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
     </symbol>
   </svg>
 
@@ -110,15 +114,20 @@
               </div>
             </div>
 
+            <div class="home-search">
+              <svg class="ic"><use href="#i-search"/></svg>
+              <span>Search apps, tests, notes</span>
+            </div>
+
             <div class="app-grid">
-              <div class="app-icon app-blue"><span>TB</span><small>Testbook</small></div>
-              <div class="app-icon app-pink"><span>Pass</span><small>Pass</small></div>
-              <div class="app-icon app-gold"><span>PYQ</span><small>Papers</small></div>
-              <div class="app-icon app-green"><span>CA</span><small>Current</small></div>
-              <div class="app-icon app-violet"><span>AI</span><small>Samadhan</small></div>
-              <div class="app-icon app-slate"><span>PDF</span><small>Notes</small></div>
-              <div class="app-icon app-teal"><span>Quiz</span><small>Quiz</small></div>
-              <div class="app-icon app-rose"><span>Mock</span><small>Mock</small></div>
+              <div class="app-icon"><svg class="ic"><use href="#i-target"/></svg></div>
+              <div class="app-icon"><svg class="ic"><use href="#i-trend"/></svg></div>
+              <div class="app-icon"><svg class="ic"><use href="#i-calendar"/></svg></div>
+              <div class="app-icon"><svg class="ic"><use href="#i-bell"/></svg></div>
+              <div class="app-icon"><svg class="ic"><use href="#i-spark"/></svg></div>
+              <div class="app-icon"><svg class="ic"><use href="#i-lock"/></svg></div>
+              <div class="app-icon"><svg class="ic"><use href="#i-flame"/></svg></div>
+              <div class="app-icon"><svg class="ic"><use href="#i-check"/></svg></div>
             </div>
 
             <div class="dock">
@@ -242,16 +251,22 @@
                     <span class="tw-go"><svg class="ic"><use href="#i-arrow"/></svg></span>
                   </div>
                 </div>
-                <div class="app-grid">
-                  <div class="app-icon app-blue"><span>TB</span></div>
-                  <div class="app-icon app-pink"><span>Pass</span></div>
-                  <div class="app-icon app-gold"><span>PYQ</span></div>
-                  <div class="app-icon app-green"><span>CA</span></div>
-                  <div class="app-icon app-violet"><span>AI</span></div>
-                  <div class="app-icon app-slate"><span>PDF</span></div>
-                  <div class="app-icon app-teal"><span>Quiz</span></div>
-                  <div class="app-icon app-rose"><span>Mock</span></div>
+                <div class="home-search">
+                  <svg class="ic"><use href="#i-search"/></svg>
+                  <span>Search apps, tests, notes</span>
                 </div>
+
+                <div class="app-grid">
+                  <div class="app-icon"><svg class="ic"><use href="#i-target"/></svg></div>
+                  <div class="app-icon"><svg class="ic"><use href="#i-trend"/></svg></div>
+                  <div class="app-icon"><svg class="ic"><use href="#i-calendar"/></svg></div>
+                  <div class="app-icon"><svg class="ic"><use href="#i-bell"/></svg></div>
+                  <div class="app-icon"><svg class="ic"><use href="#i-spark"/></svg></div>
+                  <div class="app-icon"><svg class="ic"><use href="#i-lock"/></svg></div>
+                  <div class="app-icon"><svg class="ic"><use href="#i-flame"/></svg></div>
+                  <div class="app-icon"><svg class="ic"><use href="#i-check"/></svg></div>
+                </div>
+
                 <div class="dock"><span></span><span></span><span></span><span></span></div>
               </div>
             </div>
@@ -359,16 +374,22 @@
                   <span class="tw-go"><svg class="ic"><use href="#i-arrow"/></svg></span>
                 </div>
               </div>
-              <div class="app-grid">
-                <div class="app-icon app-blue"><span>TB</span></div>
-                <div class="app-icon app-pink"><span>Pass</span></div>
-                <div class="app-icon app-gold"><span>PYQ</span></div>
-                <div class="app-icon app-green"><span>CA</span></div>
-                <div class="app-icon app-violet"><span>AI</span></div>
-                <div class="app-icon app-slate"><span>PDF</span></div>
-                <div class="app-icon app-teal"><span>Quiz</span></div>
-                <div class="app-icon app-rose"><span>Mock</span></div>
+              <div class="home-search">
+                <svg class="ic"><use href="#i-search"/></svg>
+                <span>Search apps, tests, notes</span>
               </div>
+
+              <div class="app-grid">
+                <div class="app-icon"><svg class="ic"><use href="#i-target"/></svg></div>
+                <div class="app-icon"><svg class="ic"><use href="#i-trend"/></svg></div>
+                <div class="app-icon"><svg class="ic"><use href="#i-calendar"/></svg></div>
+                <div class="app-icon"><svg class="ic"><use href="#i-bell"/></svg></div>
+                <div class="app-icon"><svg class="ic"><use href="#i-spark"/></svg></div>
+                <div class="app-icon"><svg class="ic"><use href="#i-lock"/></svg></div>
+                <div class="app-icon"><svg class="ic"><use href="#i-flame"/></svg></div>
+                <div class="app-icon"><svg class="ic"><use href="#i-check"/></svg></div>
+              </div>
+
               <div class="dock"><span></span><span></span><span></span><span></span></div>
             </div>
           </div>
@@ -472,12 +493,6 @@
           <div class="phone shortcut-phone">
             <div class="phone-screen home-screen">
               <div class="status-bar"><span>9:41</span><span class="status-icons"><i></i><i></i><i></i><span class="battery"></span></span></div>
-              <div class="app-grid shortcut-grid">
-                <div class="app-icon app-blue"><span>TB</span><small>Testbook</small></div>
-                <div class="app-icon app-pink"><span>Pass</span><small>Pass</small></div>
-                <div class="app-icon app-gold"><span>PYQ</span><small>Papers</small></div>
-                <div class="app-icon app-green"><span>CA</span><small>Current</small></div>
-              </div>
               <div class="shortcut-menu">
                 <div class="shortcut-title">Testbook</div>
                 <div class="shortcut-item"><svg class="ic"><use href="#i-target"/></svg><span>Attempt today’s test</span></div>
@@ -485,6 +500,22 @@
                 <div class="shortcut-item"><svg class="ic"><use href="#i-spark"/></svg><span>Resume · Q34/100</span></div>
                 <div class="shortcut-item"><svg class="ic"><use href="#i-lock"/></svg><span>Testbook Pass</span></div>
               </div>
+              <div class="home-search">
+                <svg class="ic"><use href="#i-search"/></svg>
+                <span>Search apps, tests, notes</span>
+              </div>
+
+              <div class="app-grid">
+                <div class="app-icon"><svg class="ic"><use href="#i-target"/></svg></div>
+                <div class="app-icon"><svg class="ic"><use href="#i-trend"/></svg></div>
+                <div class="app-icon"><svg class="ic"><use href="#i-calendar"/></svg></div>
+                <div class="app-icon"><svg class="ic"><use href="#i-bell"/></svg></div>
+                <div class="app-icon"><svg class="ic"><use href="#i-spark"/></svg></div>
+                <div class="app-icon"><svg class="ic"><use href="#i-lock"/></svg></div>
+                <div class="app-icon"><svg class="ic"><use href="#i-flame"/></svg></div>
+                <div class="app-icon"><svg class="ic"><use href="#i-check"/></svg></div>
+              </div>
+
               <div class="dock"><span></span><span></span><span></span><span></span></div>
             </div>
           </div>
