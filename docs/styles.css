@@ -729,20 +729,26 @@ svg {
   height: 9px;
 }
 
-.tw-bottom {
+.tw-action {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 8px;
   margin-top: auto;
+  padding: 7px 8px 7px 11px;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 6px 16px rgba(2, 6, 23, 0.18);
 }
 
 .tw-ai {
+  flex: 1;
   display: -webkit-box;
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  font-size: 8.5px;
+  color: var(--ink-2);
+  font-size: 9px;
   font-style: italic;
   line-height: 1.22;
   opacity: 0.9;
@@ -750,14 +756,29 @@ svg {
 
 .tw-cta {
   flex: 0 0 auto;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: #fff;
   color: var(--ink);
-  font-size: 8px;
+  font-size: 9px;
   font-weight: 800;
+  letter-spacing: 0.02em;
   line-height: 1;
   white-space: nowrap;
+}
+
+.tw-go {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.28);
+}
+
+.tw-go .ic {
+  width: 11px;
+  height: 11px;
 }
 
 /* 2x2 */
@@ -1800,9 +1821,23 @@ svg {
   font-size: 7.5px;
 }
 
+.mini-widget .tw-action {
+  padding: 5px 6px 5px 8px;
+  gap: 5px;
+}
+
 .mini-widget .tw-cta {
-  font-size: 7px;
-  padding: 5px 8px;
+  font-size: 6.5px;
+}
+
+.mini-widget .tw-go {
+  width: 17px;
+  height: 17px;
+}
+
+.mini-widget .tw-go .ic {
+  width: 9px;
+  height: 9px;
 }
 
 .mini-widget .tw-day {

@@ -212,7 +212,9 @@ The north star is **weekly active widget users who start a test** — not instal
 │  M   T   W   T   F   S   S               │
 │  ✓   ✓   ✓   ✓   ○   ○   ○               │
 │                                          │
-│  "Algebra 42% — 10 Qs"       [Start →]   │
+│  ┌────────────────────────────────────┐  │
+│  │ "Algebra 42% — 10 Qs"  Start  (→)  │  │
+│  └────────────────────────────────────┘  │
 └──────────────────────────────────────────┘
 ```
 
@@ -438,6 +440,7 @@ The widget is silent by platform design. Sound and haptics belong in a notificat
 
 - 24–28dp corner radius; full-bleed gradient; no chrome, no carousel.
 - One dominant number; one 7-day pill row; one CTA.
+- The CTA is a full-width white action bar: AI line on the left, a short action label, and a blue circular arrow. It must read as a button, not a chip.
 - Flame/character with four expressions: dim, lit, bright, out.
 - Micro Testbook mark in the top-right only.
 - Light, dark, and Material You variants.
