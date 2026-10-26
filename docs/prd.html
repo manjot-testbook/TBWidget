@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testbook Widget — PRD</title>
+  <meta name="description" content="Product requirements for the Testbook Android home screen widget: weekly streak hero, daily subline, AI micro-coach, install flow, and measurement." />
+  <meta name="theme-color" content="#F6F7FB" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="prd.css" />
+</head>
+<body>
+  <a class="skip" href="#prd">Skip to document</a>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="Testbook Widget home">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">Testbook <span>Widget</span></span>
+    </a>
+    <nav class="nav" aria-label="Documents">
+      <a href="index.html">Design</a>
+      <a href="prd.html" aria-current="page">PRD</a>
+      <a href="https://github.com/manjot-testbook/TBWidget" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+    <a class="btn btn-small btn-dark" href="index.html">Back to design</a>
+  </header>
+
+  <main class="prd-shell">
+    <div class="prd-hero">
+      <div class="eyebrow"><span class="pulse"></span> Product requirements</div>
+      <h1>Testbook Home Screen Widget</h1>
+      <p>Draft v1.0 · October 2026 · Android 9.11.x</p>
+      <div class="prd-hero-links">
+        <a class="btn btn-primary" href="index.html">View the design <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-ghost" href="https://github.com/manjot-testbook/TBWidget/blob/main/PRD.md" target="_blank" rel="noopener">View source .md</a>
+      </div>
+    </div>
+
+    <div class="prd-layout">
+      <aside class="prd-aside">
+        <span class="prd-aside-label">On this page</span>
+        <nav id="prd-toc" class="prd-toc" aria-label="PRD sections"></nav>
+        <a class="prd-source" href="https://github.com/manjot-testbook/TBWidget/blob/main/PRD.md" target="_blank" rel="noopener">Source: PRD.md ↗</a>
+      </aside>
+
+      <article id="prd" class="prd" aria-live="polite">
+        <p class="prd-loading">Loading the PRD…</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <span class="brand-mark">T</span>
+      <div><strong>Testbook Widget</strong><span>PRD v1.0 · October 2026</span></div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Design</a>
+      <a href="https://github.com/manjot-testbook/TBWidget" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://manjot-testbook.github.io/TBAppScreens/" target="_blank" rel="noopener">TBAppScreens</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+    <p class="footer-note">Design references via Mobbin. Built for the Testbook Android app.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="prd.js"></script>
+</body>
+</html>

@@ -3,7 +3,8 @@
 PRD and interactive design spec for the Testbook Android home-screen widget.
 
 - **Live design:** https://manjot-testbook.github.io/TBWidget/
-- **PRD:** [PRD.md](PRD.md)
+- **Live PRD:** https://manjot-testbook.github.io/TBWidget/prd.html
+- **PRD source:** [PRD.md](PRD.md)
 - **Screen catalogue:** https://manjot-testbook.github.io/TBAppScreens/
 
 ---
@@ -34,8 +35,11 @@ TBWidget/
 ├── README.md
 └── docs/
     ├── index.html      # Interactive design gallery
+    ├── prd.html        # Rendered PRD reading page
     ├── styles.css      # Design system + page styles
+    ├── prd.css         # PRD typography
     ├── app.js          # State gallery interactions
+    ├── prd.js          # Markdown renderer + TOC
     └── .nojekyll       # GitHub Pages
 ```
 
